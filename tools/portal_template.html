@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Your portal · First Layer Creative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#0B0B0B;--panel:#141414;--panel2:#1B1B1B;--ink:#F5F5F3;--soft:#B4B4AE;--dim:#7A7A73;--line:rgba(255,255,255,.10);--rule:rgba(255,255,255,.28);--ok:#7BD08F;
+--disp:'Inter Tight',Arial,sans-serif;--body:'Inter',Arial,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 max(16px,env(safe-area-inset-left)) 60px}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 0 14px;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap}
+.brand img{height:18px}
+.lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.hero{padding:38px 0 22px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(32px,6vw,52px);letter-spacing:-.04em;line-height:1;margin:10px 0 10px}
+.lede{color:var(--soft);font-size:16px;margin:0;max-width:60ch}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;margin-top:10px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px;min-width:0}
+.card h2{font-family:var(--disp);font-weight:700;font-size:15px;margin:0 0 12px;letter-spacing:-.01em}
+.drop .what{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:-.02em;margin:6px 0 2px}
+.drop .when{color:var(--soft)}
+.count{display:flex;gap:10px;margin-top:16px}
+.count div{background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:10px 0;text-align:center;flex:1}
+.count b{display:block;font-family:var(--disp);font-size:26px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.count span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.plan .row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.plan .row:last-of-type{border-bottom:0}
+.plan .row span:first-child{color:var(--soft)}
+.plan .row span:last-child{font-weight:600;text-align:right}
+.bar{height:6px;background:var(--panel2);border-radius:3px;overflow:hidden;margin:4px 0 2px}
+.bar i{display:block;height:100%;background:var(--ink)}
+section{margin-top:34px}
+section>h2{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.02em;margin:0 0 4px}
+.sub{color:var(--soft);margin:0 0 14px;font-size:14px}
+.docs{border-top:1px solid var(--rule)}
+.doc{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.doc b{font-family:var(--disp);font-size:16px;font-weight:700;display:block}
+.doc small{color:var(--dim);font-family:var(--mono);font-size:11px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:600px){.doc{grid-template-columns:1fr}.acts{justify-content:flex-start}}
+.btn{font-family:var(--disp);font-weight:600;font-size:13px;padding:9px 14px;border:1.5px solid var(--rule);border-radius:3px;background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap;display:inline-block;line-height:1.2}
+.btn:hover{border-color:var(--ink)}
+.btn.solid{background:var(--ink);color:#0B0B0B;border-color:var(--ink)}
+.badge{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ok);border:1px solid var(--ok);border-radius:3px;padding:7px 10px;white-space:nowrap}
+.call{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.call p{margin:0;color:var(--soft);max-width:52ch}
+footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--dim)}
+.empty{color:var(--dim);padding:14px 0}
+</style></head><body><div class="wrap">
+<header class="top"><div class="brand"><img alt="FC" src="data:image/png;base64,{{LOGO}}">First Layer Creative</div><span class="lbl" id="clientTag"></span></header>
+<div class="hero"><span class="lbl">Client portal</span><h1 id="title"></h1><p class="lede" id="lede"></p></div>
+
+<div class="grid">
+ <div class="card drop" id="dropCard"><span class="lbl">Next drop</span><div class="what" id="dropWhat"></div><div class="when" id="dropWhen"></div>
+  <div class="count" id="count"><div><b id="cd">–</b><span>days</span></div><div><b id="ch">–</b><span>hours</span></div><div><b id="cm">–</b><span>mins</span></div></div></div>
+ <div class="card plan" id="planCard"><h2>Your plan</h2><div id="planRows"></div></div>
+</div>
+
+<section><h2>Your documents</h2><p class="sub">Everything we've made for you. Open it, download the PDF, or approve it here.</p><div class="docs" id="docs"></div></section>
+
+<section><div class="card call"><div><h2 style="margin:0 0 6px">Book a strategy call</h2><p>Want to go over the strategy, what's working and what isn't? Grab a time that suits you. There's no limit.</p></div><a class="btn solid" id="bookBtn" target="_blank" rel="noopener">Book a call</a></div></section>
+
+<footer><span>First Layer Creative · Content in bulk. Until one wins.</span><span><a href="https://wa.me/447419589769" target="_blank" rel="noopener">WhatsApp +44 7419 589769</a> · <a href="mailto:mason@firstlayercreative.co.uk">mason@firstlayercreative.co.uk</a></span></footer>
+</div>
+<script id="data" type="application/json">{{DATA_JSON}}</script>
+<script src="https://tally.so/widgets/embed.js" async></script>
+<script>
+(function(){
+var D={};try{D=JSON.parse(document.getElementById('data').textContent)}catch(e){}
+var FORM="VpG5jj";
+function $(i){return document.getElementById(i)}
+function fmt(iso,withTime){if(!iso)return'';var d=new Date(iso);var o={weekday:'long',day:'numeric',month:'long'};if(withTime){o.hour='2-digit';o.minute='2-digit'}return d.toLocaleString('en-GB',Object.assign(o,{timeZone:'Europe/London'}))}
+$('clientTag').textContent=D.client||'';
+$('title').textContent=(D.client||'Your')+(D.client?"'s portal":' portal');
+$('lede').textContent=D.welcome||'Your plan, your next drop and every document we make for you, in one place.';
+// next drop
+var nd=D.next_drop;
+if(nd&&nd.date){$('dropWhat').textContent=nd.label;$('dropWhen').textContent=fmt(nd.date,true);
+ function tick(){var ms=new Date(nd.date)-new Date();if(ms<=0){$('count').innerHTML='<div><b>Today</b><span>landing</span></div>';return}
+  var m=Math.floor(ms/6e4);$('cd').textContent=Math.floor(m/1440);$('ch').textContent=Math.floor(m%1440/60);$('cm').textContent=m%60}
+ tick();setInterval(tick,30000);
+}else{$('dropWhat').textContent=nd&&nd.label?nd.label:'Dates coming soon';$('dropWhen').textContent=nd&&nd.note?nd.note:'We\'ll set your drop dates as soon as your plan is approved.';$('count').style.display='none'}
+// plan
+var P=D.plan||{},rows=[];
+function row(k,v){rows.push('<div class="row"><span>'+k+'</span><span>'+v+'</span></div>')}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+if(P.name)row('Plan',esc(P.name));
+if(P.cycle)row('This cycle',esc(P.cycle));
+if(P.total){var dlv=P.delivered||0;rows.push('<div class="row" style="display:block"><div style="display:flex;justify-content:space-between"><span>Pieces delivered</span><span>'+dlv+' of '+P.total+'</span></div><div class="bar"><i style="width:'+Math.min(100,Math.round(dlv/P.total*100))+'%"></i></div></div>')}
+if(P.revisions)row('Revisions',esc(P.revisions));
+if(P.drops)row('Drops',esc(P.drops));
+if(P.extras)row('Included',esc(P.extras));
+$('planRows').innerHTML=rows.join('')||'<div class="empty">Your plan details will appear here.</div>';
+// docs
+var docs=D.docs||[],box=$('docs');
+if(!docs.length)box.innerHTML='<div class="empty">Your first document will appear here soon.</div>';
+docs.forEach(function(d){
+ var el=document.createElement('div');el.className='doc';
+ var l=document.createElement('div');l.innerHTML='<b>'+esc(d.title)+'</b><small>'+esc(d.date||'')+'</small>';el.appendChild(l);
+ var a=document.createElement('div');a.className='acts';
+ if(d.html){var v=document.createElement('a');v.className='btn';v.textContent='Open';v.href=d.html;v.target='_blank';v.rel='noopener';a.appendChild(v)}
+ if(d.pdf){var p=document.createElement('a');p.className='btn';p.textContent='Download PDF';p.href=d.pdf;p.setAttribute('download','');a.appendChild(p)}
+ if(d.approve){
+  if(d.approved){var s=document.createElement('span');s.className='badge';s.textContent='Approved'+(d.approved_on?' · '+d.approved_on:'');a.appendChild(s)}
+  else{var b=document.createElement('button');b.className='btn solid';b.textContent='Approve';
+   var hf={client:D.client||'',document:d.title,doc:d.slug};
+   b.onclick=function(){
+    if(window.Tally&&Tally.openPopup){Tally.openPopup(FORM,{layout:'modal',width:460,hiddenFields:hf,autoClose:2500,onSubmit:function(){b.replaceWith(Object.assign(document.createElement('span'),{className:'badge',textContent:'Approved – thank you'}))}})}
+    else{window.open('https://tally.so/r/'+FORM+'?'+new URLSearchParams(hf).toString(),'_blank')}
+   };a.appendChild(b)}
+ }
+ el.appendChild(a);box.appendChild(el);
+});
+// booking
+var bk=$('bookBtn');bk.href=D.booking_url||('https://wa.me/447419589769?text='+encodeURIComponent('Hi Mason, I\'d like to book a strategy call'+(D.client?' ('+D.client+')':'')));
+})();
+</script>
+</body></html>

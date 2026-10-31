@@ -1,0 +1,18 @@
+{
+  "client": "Chipex",
+  "welcome": "Your Pilot with First Layer Creative. After our onboarding call we'll send your Brief and Roadmap here.",
+  "booking_url": "",
+  "next_drop": {
+    "label": "Brief and Roadmap",
+    "note": "Your drop dates are set as soon as you approve your Brief and Roadmap."
+  },
+  "plan": {
+    "name": "Pilot · £600",
+    "total": 14,
+    "delivered": 0,
+    "revisions": "1 round included",
+    "drops": "Two batches of 7",
+    "extras": "Onboarding call Mon 2 Nov, 09:00"
+  },
+  "docs": []
+}

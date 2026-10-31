@@ -1,0 +1,19 @@
+{
+  "client": "Christophe Duchamp",
+  "welcome": "Your Pilot with First Layer Creative: 13 pieces across two batches, then a review call to plan what's next.",
+  "booking_url": "",
+  "next_drop": {
+    "label": "Batch 1 · 7 pieces",
+    "date": "2026-11-03T10:00:00Z"
+  },
+  "plan": {
+    "name": "Pilot · £600",
+    "cycle": "28 Oct – 11 Nov",
+    "delivered": 0,
+    "total": 13,
+    "revisions": "1 round included",
+    "drops": "Batch 1 Tue 3 Nov · Batch 2 before the review call",
+    "extras": "Review call Wed 11 Nov, 15:00 UK"
+  },
+  "docs": []
+}
