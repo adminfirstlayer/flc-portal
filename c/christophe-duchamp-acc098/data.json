@@ -4,7 +4,7 @@
   "booking_url": "",
   "next_drop": {
     "label": "Batch 1 · 7 pieces",
-    "date": "2026-11-03T10:00:00Z"
+    "date": "2026-11-02T10:00:00Z"
   },
   "plan": {
     "name": "Pilot · £600",
@@ -12,7 +12,7 @@
     "delivered": 0,
     "total": 13,
     "revisions": "1 round included",
-    "drops": "Batch 1 Tue 3 Nov · Batch 2 before the review call",
+    "drops": "Batch 1 Mon 2 Nov · Batch 2 Wed 11 Nov, before the review call",
     "extras": "Review call Wed 11 Nov, 15:00 UK"
   },
   "docs": []
