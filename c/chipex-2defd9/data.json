@@ -4,14 +4,14 @@
   "booking_url": "",
   "next_drop": {
     "label": "Brief and Roadmap",
-    "note": "Your drop dates are set as soon as you approve your Brief and Roadmap."
+    "note": "Your Brief and Roadmap is on its way. Your batch dates are set as soon as you approve it."
   },
   "plan": {
     "name": "Pilot · £600",
-    "total": 14,
+    "total": 13,
     "delivered": 0,
     "revisions": "1 round included",
-    "drops": "Two batches of 7",
+    "drops": "Two batches: 7 pieces, then 6",
     "extras": "Onboarding call Mon 2 Nov, 09:00"
   },
   "docs": []
