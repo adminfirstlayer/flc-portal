@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chipex Brief and Roadmap</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{color-scheme:dark;--paper:#0B0B0B;--paper-2:#151515;--paper-3:#232323;--ink:#F5F5F3;--ink-soft:#ABABA5;--dim:#77776F;--line:rgba(255,255,255,.10);--rule:rgba(255,255,255,.26);--fill:rgba(255,255,255,.14);--ok:#5DB57A;--f-disp:'Inter Tight','Helvetica Neue',Arial,sans-serif;--f-body:'Inter','Helvetica Neue',Arial,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,Menlo,monospace}
+@page{size:A4;margin:12mm}@media print{html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+padding-inline:max(20px,env(safe-area-inset-left,0px)) max(20px,env(safe-area-inset-right,0px));padding-block:env(safe-area-inset-top,0px) 70px}
+.wrap{max-width:900px;margin:0 auto}h1,.lede,.quote{overflow-wrap:anywhere}a{color:inherit}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:22px 16px;border-bottom:1px solid var(--rule)}
+.wm{font-family:var(--f-disp);font-weight:600;font-size:13px;letter-spacing:.32em;text-transform:uppercase;text-decoration:none}
+.lbl{font-family:var(--f-mono);font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.hero{padding-block:46px 26px}
+h1{font-family:var(--f-disp);font-weight:800;font-size:clamp(36px,7vw,60px);letter-spacing:-.04em;line-height:.98;margin:16px 0 12px;text-wrap:balance}
+.lede{font-size:18px;color:var(--ink-soft);max-width:56ch;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:20px;font-family:var(--f-mono);font-size:12px;color:var(--ink-soft)}
+section{margin-top:44px}
+h2{font-family:var(--f-disp);font-weight:700;font-size:23px;letter-spacing:-.02em;margin:0 0 6px;text-wrap:balance}
+h2 .n{font-family:var(--f-mono);font-size:12px;font-weight:500;color:var(--dim);margin-right:10px;letter-spacing:.1em}
+.sub{color:var(--ink-soft);font-size:15px;margin:0 0 14px;max-width:62ch}
+h3{font-family:var(--f-disp);font-weight:700;font-size:18px;margin:22px 0 8px;letter-spacing:-.01em}
+p{margin:0 0 10px}
+.f{background:var(--fill);border-radius:2px;padding:0 3px;outline:none;cursor:text}
+.tw{overflow-x:auto;border-top:2px solid var(--ink);margin-top:8px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+th{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:500;text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--rule);vertical-align:bottom}
+td{padding:12px 12px 12px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-soft)}
+td:first-child{color:var(--ink);font-weight:600}
+ul.l{list-style:none;margin:8px 0 0;padding:0;border-top:2px solid var(--ink)}
+ul.l li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:190px 1fr;gap:16px}
+ul.l b{font-family:var(--f-disp);font-size:15.5px}ul.l span{color:var(--ink-soft)}
+.box{border:1px solid var(--rule);padding:18px 20px;background:var(--paper-2);min-width:0}
+.box.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}.box.dark .lbl{color:var(--paper-3);opacity:.75}.box.dark p{color:var(--paper-3)}
+.box h3{margin:8px 0 6px}.box p:last-child{margin-bottom:0}
+.quote{border-left:3px solid var(--ink);padding:4px 0 4px 16px;margin:10px 0;font-family:var(--f-disp);font-size:19px;line-height:1.35;letter-spacing:-.01em}
+.quote small{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-top:10px}
+.slot{border:1px solid var(--rule);padding:12px;background:var(--paper-2);min-width:0;break-inside:avoid}
+.slot .id{font-family:var(--f-mono);font-size:10.5px;color:var(--dim)}.slot b{display:block;font-family:var(--f-disp);margin:4px 0 2px;font-size:15px}
+.slot>span{font-size:13px;color:var(--ink-soft);display:block}
+.badge{display:inline-block;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink);padding:2px 6px;margin-top:6px}
+.btn{display:inline-block;font-family:var(--f-disp);font-weight:600;font-size:15px;text-decoration:none;background:var(--ink);color:var(--paper);padding:13px 20px;border:1.5px solid var(--ink)}
+.rules{margin-top:44px;border:1px dashed var(--rule);padding:14px 18px;font-size:13.5px;color:var(--ink-soft)}
+.rules b{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:6px}
+footer{margin-top:50px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13.5px;color:var(--ink-soft)}
+@media print{.rules{display:none}.f{background:none}h2,.sub,.tw thead{break-after:avoid}tr,li,.quote,.box,.slot{break-inside:avoid}section{break-inside:auto}}
+</style>
+</head><body>
+<div class="wrap">
+<header class="top"><a class="wm" href="https://firstlayercreative.co.uk" style="display:flex;align-items:center;gap:10px"><img alt="FC" style="height:18px" src="data:image/png;base64,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">First Layer Creative</a><span class="lbl">Your Pilot</span></header>
+<div class="hero"><span class="lbl">Your Pilot · Chipex</span><h1>Your Pilot: Brief and Roadmap</h1><p class="lede">Here's everything we agreed on this morning's call, Johnny, so David and Joel can catch up too. Tap Approve on your portal (or reply "approved") and we start.</p><div class="meta"><span>Client · Chipex</span><span>Date · Mon 2 November 2026</span><span>Prepared by Mason</span></div></div>
+
+<section><h2><span class="n">01</span>What we heard</h2><p class="sub">In your words.</p>
+<div class="quote">"Not a invisible, perfect repair but a realistic repair that isn't noticeable. Before and after shots."<small>From your form</small></div>
+<div class="quote">"We're not promising perfection on all levels of damage. However, it's a hell of a lot better than spending 400 quid."<small>Johnny, on the call</small></div>
+<div class="quote">"We don't want to over promise and make out it is a miracle product."<small>Johnny, by email, 28 Oct</small></div>
+<div class="quote">"Your initial focus will be on creating specific site visual assets and few ads, but not massive until the new year when we prepare for Spring."<small>David, by email, 29 Oct</small></div>
+<div class="quote">"I want to see everything you guys can offer."<small>Johnny, on the call</small></div>
+</section>
+
+<section><h2><span class="n">02</span>The goal</h2><p style="font-size:20px;font-family:var(--f-disp);letter-spacing:-.01em">Show you, in two batches, that we can make honest, realistic repair content and studio-quality kit shots, with a fresh angle for each of your four buyers, so you go into the spring ramp-up with new creative ready to test instead of the same ads since August.</p>
+<p class="sub">Context we're working to: your target CPA of £10 or less (never above £15), Pro is about 75% of sales, and winter is the quiet season, so this Pilot leans towards site visuals plus a handful of ads.</p></section>
+
+<section><h2><span class="n">03</span>Who we're talking to</h2><p class="sub">The four buyers from your v4 strategy doc. Each piece is written for one of them, with its own caption, rather than one caption for everyone.</p>
+<div class="tw"><table><thead><tr><th>Buyer</th><th>Their moment</th><th>What they believe now</th><th>What we want them to believe</th></tr></thead><tbody>
+<tr><td>Martin, the burnt sceptic</td><td>Sees another "easy repair" video and thinks: how much more money am I about to waste?</td><td>A dab of touch-up always looks obvious.</td><td>A proper system (paint, blend, polish), done carefully, gives a result that's hard to see from a normal distance.</td></tr>
+<tr><td>Priya, the body shop avoider</td><td>Finds a mark on the bumper and starts wondering what a body shop would charge, and how long she'd be without the car.</td><td>It's a body shop job or nothing.</td><td>She can do it at home in a morning, for a fraction of a quote.</td></tr>
+<tr><td>Lane, the first-timer</td><td>Her first chip. Not much to spend, and not sure her damage is right for a kit.</td><td>"I'll make it worse."</td><td>It's three careful steps, the paint is matched to her reg, and if she slips she can wipe it back with the blending solution and start again.</td></tr>
+<tr><td>Graham, the repeat user</td><td>Spots a new chip and remembers Chipex worked last time.</td><td>Already a fan, just not thinking about it today.</td><td>It's worth topping up his kit now, before the next one.</td></tr>
+</tbody></table></div></section>
+
+<section><h2><span class="n">04</span>Guardrails</h2><ul class="l">
+<li><b>Brand</b><span>Your logo and guidelines (chipex.pdf from your form). Real kit contents and sizes exactly as you listed them (tube 170 × 100; paint, blend and polish bottles per kit).</span></li>
+<li><b>Tone: it is</b><span>Straightforward, honest, quality.</span></li>
+<li><b>Tone: it isn't</b><span>Flippant, down market, a "casual quick fix". "No Essex boys", no bodge jobs, no slang captions.</span></li>
+<li><b>Claims you can make</b><span>"Excellent Trustpilot review score". Paint colour matched to your registration. Results range from flawless to hard to see, if done carefully. Wording for each claim to be signed off by you before anything runs.</span></li>
+<li><b>Avoid</b><span>"Invisible", "vanishes", "miracle" or 100% promises. Christmas gift angles. AI-looking stock scenes. Naming or knocking competitors. Rushing: the repair takes patience, and we show that.</span></li>
+</ul></section>
+
+<section><h2><span class="n">05</span>The plan</h2><p class="sub">4 concepts. Every one has a reason.</p>
+<div class="tw"><table><thead><tr><th>Concept</th><th>For</th><th>Angle and reason</th><th>What it tests</th><th>Your reference</th></tr></thead><tbody>
+<tr><td>C1 · The honest repair</td><td>Martin</td><td>A real chip, repaired carefully, shown close up and then from a normal distance. Reason: honesty builds trust and keeps reviews healthy as sales grow.</td><td>Whether honest "hard to see" framing holds attention as well as "flawless".</td><td>Your form; Johnny's "flawless to hard to see"</td></tr>
+<tr><td>C2 · Chipex vs the body shop</td><td>Priya</td><td>A plain side-by-side: body shop quote and days without the car, against a Pro kit and one morning at home. Reason: price is the biggest hurdle, so we answer it with the real comparison.</td><td>Whether a direct comparison beats a generic "best seller" message.</td><td>The call; your form (price as the biggest hurdle)</td></tr>
+<tr><td>C3 · Three steps, one morning</td><td>Lane</td><td>Paint, blend, polish, step by step. Half an hour for a chip, and you can undo a mistake with the blending solution. Reason: the fear of doing it yourself is what stops first-timers.</td><td>Whether showing the process and the safety net lowers the "will I mess it up?" barrier.</td><td>The call; how-chipex-works page</td></tr>
+<tr><td>C4 · The kit, properly shot</td><td>Graham and your website</td><td>Studio shots of the Pro kit and the range on white with a soft shadow, an unboxing film, plus the two Autoglide samples. Reason: you asked to see everything we can do, including product shots that could replace a shoot.</td><td>Whether our studio shots are good enough for your product pages.</td><td>The call; your current website shots</td></tr>
+</tbody></table></div></section>
+
+<section><h2><span class="n">06</span>Your 13 pieces</h2><p class="sub">9 images and 4 videos, mostly on the Pro kit. Batch 1 is 7 pieces (5 images, 2 videos). Batch 2 is the other 6. Ads and social at 4:5, website shots at 1:1. Each ad piece comes with a caption written for its buyer.</p><div class="slots">
+<div class="slot"><span class="id">CHX-P01</span><b>Pro kit hero</b><span>Image · C4 · The Pro kit on white with a soft shadow, to sit alongside your current product shots · 1:1</span><span class="badge">Batch 1</span></div>
+<div class="slot"><span class="id">CHX-P02</span><b>What's in the Pro kit</b><span>Image · C4 · Flat lay of everything in the tube (paint, blending solution, polish and the rest), true to size · 1:1</span><span class="badge">Batch 1</span></div>
+<div class="slot"><span class="id">CHX-L01</span><b>Before and after, honestly</b><span>Image · C1 · One chip: before, then after at a normal viewing distance. No "invisible" claim · 4:5</span><span class="badge">Batch 1</span></div>
+<div class="slot"><span class="id">CHX-L02</span><b>Chipex vs the body shop</b><span>Image · C2 · Clean side-by-side: quote, days off the road and hassle, against the Pro kit and a morning at home · 4:5</span><span class="badge">Batch 1</span></div>
+<div class="slot"><span class="id">CHX-L03</span><b>Three steps</b><span>Image · C3 · Paint, blend, polish in three close-up frames, on the Lite kit as the entry option · 4:5</span><span class="badge">Batch 1</span></div>
+<div class="slot"><span class="id">CHX-V01</span><b>Reg to repair in a morning</b><span>Video · C3 · Enter your reg, kit arrives, three steps on a real chip, done by lunch. Pro kit · 4:5</span><span class="badge">Batch 1</span></div>
+<div class="slot"><span class="id">CHX-V02</span><b>The honest close-up</b><span>Video · C1 · Macro of a careful repair, then the camera pulls back to a normal distance. Pro kit · 4:5</span><span class="badge">Batch 1</span></div>
+<div class="slot"><span class="id">CHX-P03</span><b>Autoglide samples in the studio</b><span>Image · C4 · Your two new car care bottles with the Autoglide label, white with a shadow, from your phone photos · 1:1</span><span class="badge">Batch 2</span></div>
+<div class="slot"><span class="id">CHX-P04</span><b>Lite, Plus or Pro?</b><span>Image · C4 · The three kits side by side so people can see the difference at a glance · 1:1</span><span class="badge">Batch 2</span></div>
+<div class="slot"><span class="id">CHX-L04</span><b>Winter offer</b><span>Image · C2 · A simple static for the 20% winter offer, built on the body shop comparison. Dates from David · 4:5</span><span class="badge">Batch 2</span></div>
+<div class="slot"><span class="id">CHX-L05</span><b>Steady hands</b><span>Image · C3 · Organic piece on your "if you can paint your nails" idea, handled with care, no gender jokes. We'll swap it if you'd rather not · 4:5</span><span class="badge">Batch 2</span></div>
+<div class="slot"><span class="id">CHX-V03</span><b>Unboxing the Pro kit</b><span>Video · C4 · Each part coming out of the tube, like the watch box film you liked, made from the kit you're sending · 4:5</span><span class="badge">Batch 2</span></div>
+<div class="slot"><span class="id">CHX-V04</span><b>Made a mistake? Start again</b><span>Video · C3 · The blending solution wiping a slip back so you can redo it. Pro kit · 4:5</span><span class="badge">Batch 2</span></div>
+</div></section>
+
+<section><h2><span class="n">07</span>The Roadmap</h2><p class="sub">Dates are fixed when you approve. If we're waiting on you, they move by the same number of days.</p>
+<div class="tw"><table><thead><tr><th>What</th><th>When</th></tr></thead><tbody>
+<tr><td>You approve this brief</td><td>Today, Mon 2 November</td></tr>
+<tr><td>Batch 1 lands (7 pieces)</td><td>Fri 6 November, as agreed on the call</td></tr>
+<tr><td>Your feedback and go-ahead for Batch 2</td><td>By Mon 9 November (if we don't hear, we carry on)</td></tr>
+<tr><td>Batch 2 lands (6 pieces, plus any Batch 1 changes)</td><td>Fri 13 November, before the call</td></tr>
+<tr><td>Review call with you, David and Joel</td><td>Fri 13 November, 9am</td></tr>
+</tbody></table></div></section>
+
+<section><h2><span class="n">08</span>What we need from you</h2><div class="box dark"><span class="lbl">Can stop the clock</span><h3>Phone photos of the two Autoglide samples (front, back, each side and the bottom), and the Pro kit in the post</h3><p>By Wed 4 November. Thanks for the Autoglide vector, that's in. We'll send our address for the kit separately.</p></div>
+<ul class="l" style="margin-top:18px">
+<li><b>Winter offer dates</b><span>David, the start and end dates of the 20% offer, so CHX-L04 is right.</span></li>
+<li><b>Meta access</b><span>Add First Layer Creative as a partner, view performance only. Our Meta Business portfolio ID is 1339840711115712.</span></li>
+<li><b>Joel's top performers</b><span>Your best-performing ads from the last few months, so we build on what already works.</span></li>
+<li><b>Claim wording</b><span>Your OK on how we word the Trustpilot score and the body shop price comparison before anything runs.</span></li>
+</ul></section>
+
+<section><h2><span class="n">09</span>How this works</h2><ul class="l">
+<li><b>Revisions</b><span>One round per piece. Batch 1 changes arrive with Batch 2.</span></li>
+<li><b>Feedback</b><span>One list, by the code on each piece, within 48 hours. WhatsApp is quickest.</span></li>
+<li><b>Guarantee</b><span>Every piece delivered on the dates above. If anything in Batch 1 isn't right, we fix it with Batch 2.</span></li>
+</ul></section>
+
+<section><h2><span class="n">10</span>Approve</h2><p><a class="btn" href="https://portal.firstlayercreative.co.uk/c/chipex-2defd9/" target="_blank" rel="noopener">Approve on your portal →</a></p><p class="sub">Or just reply "approved". Want something changed? Tell me and I'll update it.</p></section>
+
+<footer><span>First Layer Creative · Content in bulk. Until one wins.</span><span>WhatsApp +44 7419 589769 · mason@firstlayercreative.co.uk</span></footer>
+</div>
+
+</body></html>
