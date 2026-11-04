@@ -4,7 +4,7 @@
   "booking_url": "",
   "next_drop": {
     "label": "Batch 1 · 7 pieces",
-    "note": "Lands Fri 6 Nov once you approve your Brief and Roadmap below. Each day later moves it a day."
+    "note": "Lands Fri 6 Nov. Your Brief and Roadmap is approved."
   },
   "plan": {
     "name": "Pilot · £600",
@@ -21,7 +21,8 @@
       "date": "4 Nov",
       "html": "docs/brief-and-roadmap-v2.html",
       "pdf": "docs/brief-and-roadmap-v2.pdf",
-      "approve": true
+      "approve": false,
+      "approved": true
     }
   ]
 }
