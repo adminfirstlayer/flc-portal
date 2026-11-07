@@ -3,15 +3,15 @@
   "welcome": "Your Pilot with First Layer Creative: 13 pieces across two batches, then a review call to plan what's next.",
   "booking_url": "",
   "next_drop": {
-    "label": "Batch 1 · 7 pieces",
-    "note": "In production now. We'll message you as soon as it's ready."
+    "label": "Batch 2 · 6 pieces",
+    "note": "Lands Fri 13 Nov, before our 9am review call. Batch 1 (7 pieces) was delivered on Fri 6 Nov."
   },
   "plan": {
     "name": "Pilot · £600",
     "total": 13,
-    "delivered": 0,
+    "delivered": 7,
     "revisions": "1 round included",
-    "drops": "Two batches: 7 pieces, then 6",
+    "drops": "Batch 1 Fri 6 Nov (7 pieces) · Batch 2 Fri 13 Nov (6 pieces)",
     "extras": "Review call Fri 13 Nov, 09:00"
   },
   "docs": [
