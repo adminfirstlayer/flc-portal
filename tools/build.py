@@ -8,7 +8,11 @@ Usage:  python3 tools/build.py            (rebuild all)
 data.json fields:
   client, welcome, booking_url,
   next_drop: {label, date (ISO with Z or +00:00), note},
-  plan: {name, cycle, delivered, total, revisions, drops, extras},
+  plan: {name, cycle, delivered, total, revisions, drops, extras,
+         images: "40 a month" or {delivered, total},
+         video: "3 standard videos" (Pilot),
+         units: {total, used (optional), per: "a month"}},   # production units for video (Starter 10, Growth 20)
+  show_units: true (show the production-units explainer without a units block, e.g. Pilot clients), units_sub: optional intro line,
   docs: [{slug, title, date, html, pdf, approve, approved, approved_on}]   (newest first)
 Document files live in c/<slug>/docs/<doc-slug>.html and .pdf; use relative paths "docs/<doc-slug>.html".
 """

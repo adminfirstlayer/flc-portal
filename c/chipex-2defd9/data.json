@@ -1,18 +1,21 @@
 {
   "client": "Chipex",
-  "welcome": "Your Pilot with First Layer Creative: 13 pieces across two batches, then a review call to plan what's next.",
+  "welcome": "Your Growth plan with First Layer Creative: 40 images and 20 production units for video every month, in weekly drops.",
   "booking_url": "",
   "next_drop": {
-    "label": "Batch 2 · 6 pieces",
-    "note": "Lands Fri 13 Nov, before our 9am review call. Batch 1 (7 pieces) was delivered on Fri 6 Nov."
+    "label": "Weekly drops",
+    "note": "Each drop is 10 images and about 5 units of video. Your drop dates are in your monthly plan."
   },
   "plan": {
-    "name": "Pilot · £600",
-    "total": 13,
-    "delivered": 7,
-    "revisions": "1 round included",
-    "drops": "Batch 1 Fri 6 Nov (7 pieces) · Batch 2 Fri 13 Nov (6 pieces)",
-    "extras": "Review call Fri 13 Nov, 09:00"
+    "name": "Growth · £2,100 a month",
+    "images": "40 a month",
+    "units": {
+      "total": 20,
+      "per": "a month for video"
+    },
+    "revisions": "2 rounds per piece",
+    "drops": "Weekly · 10 images + about 5 units of video",
+    "extras": "Competitor watch · Meta ad report · 90-day roadmap · free 24-hour rush · price lock"
   },
   "docs": [
     {

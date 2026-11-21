@@ -51,6 +51,15 @@ section>h2{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing
 .call p{margin:0;color:var(--soft);max-width:52ch}
 footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--dim)}
 .empty{color:var(--dim);padding:14px 0}
+.units{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:760px){.units{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.units{grid-template-columns:1fr}}
+.u{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;min-width:0}
+.u.hi{background:var(--ink);color:#0B0B0B;border-color:var(--ink)}.u.hi .lbl,.u.hi p{color:#444}
+.u.ext{border-style:dashed;border-color:var(--rule)}
+.u b{display:block;font-family:var(--disp);font-weight:800;font-size:18px;letter-spacing:-.02em;margin:6px 0 4px}
+.u p{margin:0;color:var(--soft);font-size:13.5px}
+.small{color:var(--dim);font-size:13px;margin:12px 0 0}
 </style></head><body><div class="wrap">
 <header class="top"><div class="brand"><img alt="FC" src="data:image/png;base64,{{LOGO}}">First Layer Creative</div><span class="lbl" id="clientTag"></span></header>
 <div class="hero"><span class="lbl">Client portal</span><h1 id="title"></h1><p class="lede" id="lede"></p></div>
@@ -60,6 +69,16 @@ footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--rule);display
   <div class="count" id="count"><div><b id="cd">–</b><span>days</span></div><div><b id="ch">–</b><span>hours</span></div><div><b id="cm">–</b><span>mins</span></div></div></div>
  <div class="card plan" id="planCard"><h2>Your plan</h2><div id="planRows"></div></div>
 </div>
+
+<section id="unitsSec" style="display:none"><h2>How your production units work</h2><p class="sub" id="unitsSub">Video on your plan comes as production units. You choose the mix of quick videos and bigger edits.</p>
+<div class="units">
+ <div class="u"><span class="lbl">1 unit</span><b>Standard video</b><p>Up to 30 seconds and up to 5 cuts. A UGC-style talking head, product demo or simple ad.</p></div>
+ <div class="u hi"><span class="lbl">2 units</span><b>Premium video</b><p>30 to 50 seconds, 6 to 13 cuts, heavier editing. Story-led ads, launch and brand videos.</p></div>
+ <div class="u"><span class="lbl">1 unit</span><b>Hook variants</b><p>2 new hooks on a video you already have, so you can test what stops the scroll.</p></div>
+ <div class="u ext"><span class="lbl">£200 each · extra</span><b>Extended video</b><p>Over 50 seconds or more than 13 cuts. Added on top of your plan, uses no units.</p></div>
+</div>
+<p class="small">A cut is each change of shot. If a video goes past the limits for its type, it moves up to the next type, and we'll always tell you first. Unused units don't roll over. Revisions and extra sizes don't use units.</p>
+<p style="margin-top:14px"><a class="btn" id="extBtn" target="_blank" rel="noopener">Ask for an extended video</a></p></section>
 
 <section><h2>Your documents</h2><p class="sub">Everything we've made for you. Open it, download the PDF, or approve it here.</p><div class="docs" id="docs"></div></section>
 
@@ -91,6 +110,10 @@ function row(k,v){rows.push('<div class="row"><span>'+k+'</span><span>'+v+'</spa
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 if(P.name)row('Plan',esc(P.name));
 if(P.cycle)row('This cycle',esc(P.cycle));
+function bar(label,a,t){return '<div class="row" style="display:block"><div style="display:flex;justify-content:space-between"><span>'+label+'</span><span>'+a+' of '+t+'</span></div><div class="bar"><i style="width:'+Math.min(100,Math.round(a/t*100))+'%"></i></div></div>'}
+if(P.images){if(typeof P.images==='object'){P.images.total?rows.push(bar('Images delivered',P.images.delivered||0,P.images.total)):0}else row('Images',esc(P.images))}
+if(P.video)row('Video',esc(P.video));
+if(P.units){if(typeof P.units==='object'){if(P.units.used!=null)rows.push(bar('Production units used',P.units.used,P.units.total));else row('Production units',esc(P.units.total)+(P.units.per?' '+esc(P.units.per):''))}else row('Production units',esc(P.units))}
 if(P.total){var dlv=P.delivered||0;rows.push('<div class="row" style="display:block"><div style="display:flex;justify-content:space-between"><span>Pieces delivered</span><span>'+dlv+' of '+P.total+'</span></div><div class="bar"><i style="width:'+Math.min(100,Math.round(dlv/P.total*100))+'%"></i></div></div>')}
 if(P.revisions)row('Revisions',esc(P.revisions));
 if(P.drops)row('Drops',esc(P.drops));
@@ -116,6 +139,9 @@ docs.forEach(function(d){
  }
  el.appendChild(a);box.appendChild(el);
 });
+// production units
+if(P.units||D.show_units){$('unitsSec').style.display='';if(D.units_sub)$('unitsSub').textContent=D.units_sub}
+$('extBtn').href='https://wa.me/447419589769?text='+encodeURIComponent('Hi Mason, I\'d like an extended video (£200)'+(D.client?' ('+D.client+')':''));
 // booking
 var bk=$('bookBtn');bk.href=D.booking_url||('https://wa.me/447419589769?text='+encodeURIComponent('Hi Mason, I\'d like to book a strategy call'+(D.client?' ('+D.client+')':'')));
 })();

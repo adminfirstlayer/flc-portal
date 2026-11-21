@@ -13,7 +13,11 @@
     "total": 13,
     "revisions": "1 round included",
     "drops": "Batch 1 Mon 2 Nov · Batch 2 Wed 11 Nov, before the review call",
-    "extras": "Review call Wed 11 Nov, 15:00 UK"
+    "extras": "Review call Wed 11 Nov, 15:00 UK",
+    "images": "10",
+    "video": "3 standard videos"
   },
-  "docs": []
+  "docs": [],
+  "show_units": true,
+  "units_sub": "On our monthly plans, video comes as production units, so you choose the mix of quick videos and bigger edits. Here's how they work."
 }
