@@ -1,10 +1,10 @@
 {
   "client": "Chipex",
-  "welcome": "Your Growth plan with First Layer Creative: 40 images and 20 production units for video every month, in weekly drops.",
+  "welcome": "Welcome to Growth with First Layer Creative: 40 images and 20 production units for video every month, in weekly drops.",
   "booking_url": "",
   "next_drop": {
-    "label": "Weekly drops",
-    "note": "Each drop is 10 images and about 5 units of video. Your drop dates are in your monthly plan."
+    "label": "Growth starts next week",
+    "note": "Your first monthly plan will set your weekly drop dates. Each drop is 10 images and about 5 units of video."
   },
   "plan": {
     "name": "Growth · £2,100 a month",
